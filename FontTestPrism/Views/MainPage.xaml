@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" 
+	prism:ViewModelLocator.AutowireViewModel="True" 
+	x:Class="FontTestPrism.Views.MainPage" 
+	Title="MainPage">
+	<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="5, 20, 5, 0" Android="5, 0, 5, 0"/>
+	</ContentPage.Padding>
+	<ContentPage.Content>
+		<StackLayout>
+			<Label Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" />
+			<Label Text="Hello Forms with XAML">
+			    <Label.FontFamily>
+			        <OnPlatform x:TypeArguments="x:String">
+			            <OnPlatform.iOS>MarkerFelt-Thin</OnPlatform.iOS>
+			            <OnPlatform.Android>Lobster-Regular.ttf#Lobster-Regular</OnPlatform.Android>
+			            <OnPlatform.WinPhone></OnPlatform.WinPhone>
+			        </OnPlatform>
+			    </Label.FontFamily>
+			</Label>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
